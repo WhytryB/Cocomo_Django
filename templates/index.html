@@ -1,0 +1,9 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+<a href="{% url 'base_coco' %}">Базовый уровень</a>
+<br>
+<a href="{% url 'promlevel' %}">Промежуточный уровень</a>
+    <br>
+<a href="{% url 'cocomo2' %}">Cocomo 2</a>
+{% endblock %}

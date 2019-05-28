@@ -1,0 +1,32 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+<form class="" action="{% url 'base_coco' %}" method="post">
+		{% csrf_token %}
+		{% for field in form %}
+			<div class="form-group">
+				{% if field.errors %}
+					<div class="alert alert-danger">
+						{{ field.error }}
+					</div>
+				{% endif %}
+			</div>
+		{% endfor %}
+		<div class="form-group">
+			Введите обьем ПО в кол-ве строк: {{ form.size }}
+			<br>
+			Тип Проекта: {{ form.sh }}
+		</div>
+		<button type="submit" class="btn btn-secondary" name="button">Сохранить</button>
+</form>
+Трудоёмкость: {{ PM }}
+<br>
+Время разработки: {{ TM }} (дней)
+
+        </div>
+    </div>
+</div>
+{% endblock %}

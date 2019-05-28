@@ -1,0 +1,63 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+<form class="" action="{% url 'cocomo2' %}" method="post">
+		{% csrf_token %}
+		<div class="form-group">
+			Введите обьем ПО в кол-ве строк: {{ size_form.prec}}
+			<br>
+             {{ size_form.flex}}
+             {{ size_form.resl}}
+             {{ size_form.team}}
+             {{ size_form.pmat}}
+		</div>
+        <div class="form-group">
+			Введите обьем ПО в кол-ве строк: {{ work_form.pers }}
+			<br>
+            {{ work_form.prex  }}
+            {{ work_form.rcpx  }}
+            {{ work_form.ruse  }}
+            {{ work_form.pdif  }}
+            {{ work_form.fcil  }}
+            {{ work_form.sced  }}
+		</div>
+        <div class="form-group">
+			Введите обьем ПО в кол-ве строк: {{ error_form.acap }}
+			<br>
+            {{ error_form.aexp }}
+            {{ error_form.pcap }}
+            {{ error_form.pcon }}
+            {{ error_form.pexp }}
+            {{ error_form.ltex }}
+            {{ error_form.rely }}
+            {{ error_form.data }}
+            {{ error_form.cplx }}
+            {{ error_form.ruse }}
+            {{ error_form.docu }}
+            {{ error_form.time }}
+            {{ error_form.stor }}
+            {{ error_form.pvol }}
+            {{ error_form.tool }}
+            {{ error_form.site }}
+            {{ error_form.sced }}
+
+		</div>
+
+        <div class="form-group">
+        Введите обьем ПО в кол-ве строк: {{ form.size }}
+        <br>
+        Тип Проекта: {{ form.sh }}
+		</div>
+		<button type="submit" class="btn btn-secondary" name="button">Сохранить</button>
+</form>
+Трудоёмкость: {{ PM }}
+<br>
+{#Время разработки: {{ TM }} (дней)#}
+
+        </div>
+    </div>
+</div>
+{% endblock %}

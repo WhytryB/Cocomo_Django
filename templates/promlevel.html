@@ -1,0 +1,60 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+<form class="" action="{% url 'promlevel' %}" method="post">
+		{% csrf_token %}
+
+		<div class="form-group">
+			Ограничения быстродействия: {{ ap_form.speed }}
+			<br>
+           Ограничения памяти {{ ap_form.memory  }}
+            <br>
+            Нейстойчивость вир. машины{{ ap_form.virtual }}
+            <br>
+            Время востановления {{ ap_form.times }}
+		</div>
+        <div class="form-group">
+			Аналитические способности: {{ pe_form.analiz  }}
+			<br>
+            Опыт разработки {{ pe_form.oput  }}
+            <br>
+            Способности к разработки {{ pe_form.sposobnost  }}
+            <br>
+            Опыт использования вир. машин {{ pe_form.oput_virtual  }}
+            <br>
+            Опыт разработки на языках программирования {{ pe_form.oput_language  }}
+		</div>
+        <div class="form-group">
+			Надежность ПО: {{ po_form.save_po }}
+			<br>
+            Размер БД {{ po_form.size_bd }}
+            <br>
+            Сложность продукта {{ po_form.prod_lev }}
+		</div>
+
+        <div class="form-group">
+			Применение методов разработки ПО: {{ pr_form.method}}
+			<br>
+             Использование инструментария разработки ПО {{ pr_form.instruments }}
+            <br>
+            Требования соблюдения графика разработки {{ pr_form.treb }}
+		</div>
+
+        <div class="form-group">
+        Введите обьем ПО в кол-ве строк: {{ form.size }}
+        <br>
+        Тип Проекта: {{ form.sh }}
+		</div>
+		<button type="submit" class="btn btn-secondary" name="button">Сохранить</button>
+</form>
+Трудоёмкость: {{ PM }}
+<br>
+{#Время разработки: {{ TM }} (дней)#}
+
+        </div>
+    </div>
+</div>
+{% endblock %}
