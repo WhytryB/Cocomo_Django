@@ -8,6 +8,9 @@
 		{% csrf_token %}
 
 		<div class="form-group">
+              <br>
+            <h4>Характеристики аппаратного обеспечения</h4>
+            <br>
 			Ограничения быстродействия: {{ ap_form.speed }}
 			<br>
            Ограничения памяти {{ ap_form.memory  }}
@@ -17,6 +20,9 @@
             Время востановления {{ ap_form.times }}
 		</div>
         <div class="form-group">
+              <br>
+            <h4>Характеристики персонала</h4>
+            <br>
 			Аналитические способности: {{ pe_form.analiz  }}
 			<br>
             Опыт разработки {{ pe_form.oput  }}
@@ -28,6 +34,9 @@
             Опыт разработки на языках программирования {{ pe_form.oput_language  }}
 		</div>
         <div class="form-group">
+              <br>
+            <h4>Характеристики продукта</h4>
+            <br>
 			Надежность ПО: {{ po_form.save_po }}
 			<br>
             Размер БД {{ po_form.size_bd }}
@@ -36,6 +45,9 @@
 		</div>
 
         <div class="form-group">
+              <br>
+            <h4>Характеристики проекта</h4>
+            <br>
 			Применение методов разработки ПО: {{ pr_form.method}}
 			<br>
              Использование инструментария разработки ПО {{ pr_form.instruments }}

@@ -29,9 +29,16 @@ Rating_low = (
     ('Очень высокий', 'Очень высокий'),
     ('Критический', 'Критический'),
 )
+
+
 class base_coco(forms.Form):
     size = forms.FloatField()
     sh = forms.CharField(widget=forms.Select(choices=Choises))
+
+
+class checkform(forms.Form):
+    check  = forms.CharField()
+
 
 class coco2(forms.Form):
     size = forms.FloatField()

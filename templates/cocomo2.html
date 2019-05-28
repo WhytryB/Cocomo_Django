@@ -7,42 +7,68 @@
 <form class="" action="{% url 'cocomo2' %}" method="post">
 		{% csrf_token %}
 		<div class="form-group">
-			Введите обьем ПО в кол-ве строк: {{ size_form.prec}}
-			<br>
-             {{ size_form.flex}}
-             {{ size_form.resl}}
-             {{ size_form.team}}
-             {{ size_form.pmat}}
+            <h4>Фактор масштаба</h4>
+            <br>
+			 prec {{ size_form.prec}}
+             flex{{ size_form.flex}}
+             resl{{ size_form.resl}}
+            team{{ size_form.team}}
+            pmat {{ size_form.pmat}}
 		</div>
         <div class="form-group">
-			Введите обьем ПО в кол-ве строк: {{ work_form.pers }}
-			<br>
-            {{ work_form.prex  }}
-            {{ work_form.rcpx  }}
-            {{ work_form.ruse  }}
-            {{ work_form.pdif  }}
-            {{ work_form.fcil  }}
-            {{ work_form.sced  }}
+            <h1>Если ваш тип проекта предварительный</h1>
+            <h4>Множитель трудоемкости </h4>
+            <br>
+            <h4>Параметры персонала</h4>
+            <br>
+			Pers {{ work_form.pers }}
+
+           prex{{ work_form.prex  }}
+            <br>
+            <h4>Параметры ппродукта</h4>
+            <br>
+            rcpx{{ work_form.rcpx  }}
+             ruse{{ work_form.ruse  }}
+            <br>
+              <h4>Параметры платформы</h4>
+            <br>
+            pdif{{ work_form.pdif  }}
+            <h4>Параметры проекта</h4>
+            <br>
+            fcil{{ work_form.fcil  }}
+            sced{{ work_form.sced  }}
 		</div>
         <div class="form-group">
-			Введите обьем ПО в кол-ве строк: {{ error_form.acap }}
+            <h1>Если ваш тип проекта детальный</h1>
+            <h4>Personal Factors</h4>
+            <br>
+			Analyst Capability: {{ error_form.acap }}
 			<br>
-            {{ error_form.aexp }}
-            {{ error_form.pcap }}
-            {{ error_form.pcon }}
-            {{ error_form.pexp }}
-            {{ error_form.ltex }}
-            {{ error_form.rely }}
-            {{ error_form.data }}
-            {{ error_form.cplx }}
-            {{ error_form.ruse }}
-            {{ error_form.docu }}
-            {{ error_form.time }}
-            {{ error_form.stor }}
-            {{ error_form.pvol }}
-            {{ error_form.tool }}
-            {{ error_form.site }}
-            {{ error_form.sced }}
+             Applications Experience{{ error_form.aexp }}
+            Programmer Capability{{ error_form.pcap }}
+             Personnel Continuity{{ error_form.pcon }}
+             Platform Experience{{ error_form.pexp }}
+            Language and Tool Experience:{{ error_form.ltex }}
+            <br>
+            <h4>Product Factors</h4>
+            <br>
+            Reqiered Software Reliability{{ error_form.rely }}
+            Databaze size{{ error_form.data }}
+            Software Product Complexity{{ error_form.cplx }}
+            Requiered Reusability{{ error_form.ruse }}
+             Documentation match{{ error_form.docu }}
+            <br>
+            <h4>Pltform Factors</h4>
+            <br>
+            Execution Time{{ error_form.time }}
+            Main Storage{{ error_form.stor }}
+            Platform Volatilitty{{ error_form.pvol }}
+            <br>
+            <h4>Project Factors</h4>
+            <br>
+            Use of software tools{{ error_form.tool }}
+            Multisite Developement {{ error_form.site }}
+            Requiered Dev{{ error_form.sced }}
 
 		</div>
 
